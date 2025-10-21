@@ -1,0 +1,13 @@
+[Unit]
+Description=Shop SignIn Service
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/admin/ShopSignIn/main.py
+WorkingDirectory=/home/admin/ShopSignIn
+Restart=always
+User=admin
+
+[Install]
+WantedBy=multi-user.target
